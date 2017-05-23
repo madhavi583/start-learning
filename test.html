@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<button onclick="myFunction()">Push</button>
+
+<p id="demo"></p>
+<button onclick="myFunction1()">unshift</button>
+
+<p id="un"></p>
+
+
+<script>
+var myArray="hello";
+var array=[1,2,3];
+ //var mm=array.push("4");
+//document.write(mm);
+var arr = ["1", "2", "3"];
+document.getElementById("demo").innerHTML = arr;
+
+function myFunction() {
+    arr.push("4");
+    document.getElementById("demo").innerHTML = arr;
+}
+var unshift1 = ["1", "2", "3","4"];
+document.getElementById("un").innerHTML = unshift1;
+
+function myFunction1() {
+   unshift1.unshift("0");
+    document.getElementById("un").innerHTML = unshift1;
+}
+
+function reverseString(str) {
+    return str;
+}
+document.write(reverseString("hello pathapati"));
+/*var splitString = str.split("hello madhavi");
+document.write(splitString);
+ var pp=strrev("Hello World!");
+document.write(pp);*/
+function reverseString(str) {
+    // Step 1. Use the split() method to return a new array
+    var splitString = str.split(""); // var splitString = "hello".split("");
+    // ["h", "e", "l", "l", "o"]
+ 
+    // Step 2. Use the reverse() method to reverse the new created array
+    var reverseArray = splitString.reverse(); // var reverseArray = ["h", "e", "l", "l", "o"].reverse();
+    // ["o", "l", "l", "e", "h"]
+ 
+    // Step 3. Use the join() method to join all elements of the array into a string
+    var joinArray = reverseArray.join(""); // var joinArray = ["o", "l", "l", "e", "h"].join("");
+    // "olleh"
+    
+    //Step 4. Return the reversed string
+    return joinArray; // "olleh"
+}
+ 
+document.write("</br>");
+var text = 'Text to reverse';
+var reversed = text.split('').reverse().join('');
+document.write(reversed);
+/*var res = str.replace(reversed);
+document.write(res);*/
+
+document.write("</br>");
+  
+ var str = "hello madhavi";
+document.write(str.split("").reverse().join("").split(" ").reverse().join(" "));
+
+var arr1 = [9, 4, 6, 3, 1, 6, 5];
+ document.write(arr1.sort());
+ document.write("</br>");
+// high numbers
+  var numbers = [1,6, 4, ,3, 6, 8,6,2,3,4,6,6, 9,6];
+numbers.sort(function(a,b){return b - a});
+//alert(numbers[0]);
+document.write("</br>");
+//max
+
+var temp1 = "1,6, 4, ,3, 6, 8,6,2,3,4,6,6, 9,6,6]";
+var count1 = (temp1.match(/6/g) || []).length;
+//console.log(count1);
+document.write(count1);
+var theString = "This is a string.";
+console.log(theString.split("is").length - 1);
+
+// one more example for max
+
+function count() {
+    array_elements = ["1", "6", "4", "3", "6", "8", "6", "2", "3", "4", "6", "6", "9", "6", "6"];
+
+    array_elements.sort();
+
+    var current = null;
+    var cnt = 0;
+    for (var i = 0; i < array_elements.length; i++) {
+        if (array_elements[i] != current) {
+            if (cnt > 0) {
+                document.write(current + ' comes --> ' + cnt + ' times<br>');
+            }
+            current = array_elements[i];
+            cnt = 1;
+        } else {
+            cnt++;
+        }
+    }
+    if (cnt > 0) {
+        document.write(current + ' comes --> ' + cnt + ' times');
+    }
+
+}
+// this my own code
+var str = "hello madhavi pathapati";
+document.write(str.split("").reverse().join("").split(" ").reverse().join(" "));
+</script>
+
+<script>count()</script>
+</body>
+</html>
