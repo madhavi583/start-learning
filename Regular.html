@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+function myFunction(a, b) {
+    return a * b;
+}
+document.getElementById("demo").innerHTML = myFunction(4, 3);
+
+function myFunction(a, b) {
+    return a + b;
+}
+document.getElementById("demo1").innerHTML = myFunction(4, 4);
+function myFunction(a, b) {
+    return a - b;
+}
+document.getElementById("demo2").innerHTML = myFunction(4, 2);
+
+function add() {
+var a=10;
+var b=30;
+var c=a+b;
+  //alert(c);
+  document.write(c);
+}
+add();
+//Anonymous function definition:
+var anon = function() {
+  alert('I am anonymous');
+};
+anon();
+var madhu= function()
+{
+var a=100; var b=200;
+var c= a*b;
+alert(c);
+}
+madhu();
+//Self Invoking Functions
+for( var i = 0; i < 10; i++ ) {
+  setTimeout(function(){
+    console.log(i)
+  })
+}
+// another Self Invoking Functions
+
+for( var i = 0; i < 10; i++ ) {
+  (function(num){
+    setTimeout(function(){
+      console.log(num)
+    })
+  })(i)
+}
+//Anonymous function definition:
+
+         <!--
+            var func = new Function("x", "y", "return x*y;");
+            function secondFunction(){
+               var result;
+               result = func(10,20);
+               document.write ( result );
+            }
+         //-->
+    function Pet(name, species, hello){
+    this.name = name;
+    this.species = species;
+    this.hello = hello;
+    this.sayHello = function()
+    {
+        alert(this.hello);
+    }
+}
+var rufus = new Pet("Rufus", "cat", "miaow");
+alert(rufus.constructor.toString());
+//alert(this.hello);
+
+</script>
+ <button onclick="secondFunction()" value="Call Function">Call Function</button>
+      
+</body>
+</html>
