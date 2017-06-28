@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>This is Closure Function</title>
+</head>
+<body>
+<script type="text/javascript">
+/*function showName (firstName, lastName) {
+​var name = "Your name is ";
+    // this inner function has access to the outer function's variables, including the parameter​
+​function makeFullName () {       
+​return name + firstName + " " + lastName;    
+}
+​
+​return makeFullName ();
+}
+​
+showName ("Michael", "Jackson"); // Your name is Michael Jackson */
+console.log("showName");
+
+function makeFunc() {
+  var name = 'Mozilla';
+  function displayName() {
+    alert(name);
+  }
+  return displayName;
+}
+
+var myFunc = makeFunc();
+myFunc();
+</script>
+</body>
+</html>

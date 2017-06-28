@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script data-require="angular.js@1.4.3" data-semver="1.4.3" src="https://code.angularjs.org/1.4.3/angular.js"></script>
+    <script data-require="angular-sanitize@*" data-semver="1.4.3" src="https://code.angularjs.org/1.4.3/angular-sanitize.js"></script>
+    <link rel="stylesheet" href="style.css" />
+   <!-- <script src="script.js"></script>-->
+   <script>
+   angular.module('app', ['ngSanitize'])
+
+  .controller('SomeController', function($scope,$sce) {
+    console.log($scope.someText);
+    $scope.$watch('someText', function(){
+      console.log($scope.someText);
+      $scope.text = $scope.someText;
+		    $scope.text = $scope.text.replace(/\n\r?/g, '<br />');
+	   	$sce.trustAsHtml($scope.text)
+    })
+  })
+  
+   </script>
+  </head>
+
+  <body ng-app="app">
+    <div ng-controller="SomeController">
+      <textarea ng-model="someText" rows="8" cols="25"></textarea>
+      <br>
+       <p  ng-bind-html="text"></p>
+    </div>
+  </body>
+
+</html>

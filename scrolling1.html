@@ -1,0 +1,17 @@
+<div>
+    <input />
+    <textarea></textarea>
+</div>
+<script>
+window.onkeydown = function(e) {
+    if(e.keyCode == 32 && e.target == document.body) {
+        e.preventDefault();
+        return false;
+    }
+};
+</script>
+<style>
+div {
+    height: 100000px;
+}
+</style>

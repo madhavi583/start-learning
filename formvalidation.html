@@ -1,0 +1,81 @@
+<html>
+<head>
+<script>
+//document.write("hello form validations");
+
+</script>
+</head>
+<body>
+<script type="text/javascript">
+document.write("hello form validations");
+function validation()
+{
+if(document.formName.textbox.checked)
+
+alert("it is checked");
+else
+alert( "it is not checked");
+
+
+}
+/*function promiseThatResolvesToTwo() {
+  return new Promise( (resolve, reject) => {
+    setTimeout( () => {
+      resolve(2);
+    }, 2000);
+  });
+}
+
+let promise = promiseThatResolvesToTwo();
+
+promise.then((value) => console.log(value));
+
+console.log("here");*/
+//promise
+const promise = new Promise( function(resolve, reject) {
+  setTimeout( () => {
+    resolve( [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9] );
+  }, 2000);
+});
+
+function onlyEvenNumbers(array) {
+  return array.filter( (value) => {
+    return (value % 2) === 0;
+  });
+}
+
+function sumOfArray(array) {
+  return array.reduce( (a, b) => {
+    return a + b;
+  }, 0);
+}
+
+function logPlease(value) {
+  console.log(value);
+  return value;
+}
+
+function errorHandler(err) {
+  console.log("ERROR");
+  console.log(err);
+}
+
+promise
+  .then(logPlease)
+  .then(onlyEvenNumbers)
+  .then(logPlease)
+  .then(sumOfArray)
+  .then(logPlease)
+  .catch(errorHandler);
+  
+
+</script>
+<form name="formName">
+<input type="checkbox" name="textbox"/>
+<!--<input type="text" name="name" id="name"/>
+<input type="text" name="password" id="password"/>-->
+<input type="button" value="submit" onClick="validation()"/>
+</form>
+
+</body>
+</html>

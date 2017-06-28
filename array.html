@@ -1,0 +1,108 @@
+<html>
+<head>
+<script type="text/javascript">
+var myArray=["madhavi","prema","madhu"];
+document.write(myArray[1]);
+document.write("</br>");
+ document.write(myArray.sort() +"</br>");
+
+var myArray2= [];
+myArray2[0]="venkat";
+myArray2[1]="venkat1";
+myArray2[2]="venkat2";
+//alert(myArray2[2]);
+var myArray3= [];
+for(var i=0;i<=5;i++){
+//myArray3[i]=i *2;
+myArray3.push(i *2);
+}
+for(var i=0;i<=5;i++)
+{
+//document.write(myArray3[i] + "</br>");
+document.write(myArray3.pop() + "</br>");
+
+}
+//alert(myArray3.length);
+//alert(myArray3);
+/*var emptyArray = new array(10);
+alert(emptyArray.length);*/
+// This call diff types of array methods
+
+//this call concat        
+		var alpha = ["hello", "How", "when"];
+         var numeric = [1, 2, 3];
+
+         var alphaNumeric = alpha.concat(numeric);
+         document.write("alphaNumeric : " + alphaNumeric ); 
+		 
+		 document.write("</br>");
+		 //Creating two dimensional array in javascript
+		 
+		 /*var firstArray = new array(3);
+		 for(var i=0;i<=3;i++)
+		 {
+		 firstArray[i]=new array(3);
+		 }
+		 
+ firstArray[0][0]=1;
+ firstArray[0][1]=2;
+ firstArray[0][2]=3;
+ //firstArray[0][3]=4;
+ 
+ firstArray[1][0]=10;
+ firstArray[1][1]=11;
+ firstArray[1][2]=12;
+// firstArray[1][3]=13;
+ 
+  firstArray[2][0]=20;
+ firstArray[2][1]=21;
+ firstArray[2][2]=22;
+ //firstArray[2][3]=23;
+ for(var i=0;i<=3;i++)
+ {
+ for(var j=0;j<=3;j++)
+ {
+ document.write("array");
+ document.write(firstArray[i][j] + "emsp");
+ }
+  document.write("</br>");
+ }*/
+ var myarray=new Array(3)
+for (i=0; i <3; i++){
+    myarray[i]=new Array(3)
+	}
+myarray[0][0]=1;
+myarray[0][1]= 2;
+myarray[0][2]= 3;
+myarray[1][0]= 4;
+myarray[1][1]= 5;
+myarray[1][2]= 6;
+myarray[2][0]= 7;
+myarray[2][1]=8;
+myarray[2][2]= 9;
+for(var i=0;i<=3;i++)
+ {
+ for(var j=0;j<=3;j++)
+ {
+ //document.write("array");
+ document.write(myarray[i][j]);
+ }
+  document.write("</br>");
+ }
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

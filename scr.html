@@ -1,0 +1,34 @@
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+<div ng-app = "scrollbarEx">
+  <div  ng-controller = "testCtrl">
+    {{items}}
+    <ul ng-scrollbars style="height:100px; width: 100px;">
+      <li ng-repeat = "item in items">
+        {{item}}
+      </li>
+    </ul>
+  </div>  
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+<script>
+var app = angular.module("scrollbarEx", ['ngScrollbars']);
+
+app.config(function (ScrollBarsProvider) {
+    ScrollBarsProvider.defaults = {
+        scrollButtons: {
+            scrollAmount: 'auto', // scroll amount when button pressed
+            enable: true // enable scrolling buttons by default
+        },
+        axis: 'y', // enable 2 axis scrollbars by default
+       autoHideScrollbar: true,
+       theme: 'dark',
+        advanced:{
+          updateOnContentResize: true
+        }
+    };
+});
+
+app.controller("testCtrl", function($scope) {
+  $scope.items = ["item1", "item2", "item3", "item4", "item5","item6", "item7", "item8", "item9", "item10"];
+});
+</script>

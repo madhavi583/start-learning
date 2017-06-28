@@ -1,0 +1,211 @@
+<html>
+<head>
+<script type="text/javascript">
+function validte()
+{
+var firstNum=parseInt(document.getElementById('uname').value);
+var SecongNum=parseInt(document.getElementById('pname').value);
+//alert(firstNum + SecongNum);
+document.getElementById('total').value =firstNum + SecongNum;
+if(firstNum == "")
+{
+alert("First number reqed");
+return;
+}
+var firstNumber=parseFloat(firstNum);
+if(isNaN(firstNumber))
+{
+alert("Please enter valid first number");
+}
+if(isNaN(SecongNum))
+{
+alert("Please enter valid second number");
+}
+}
+// String in javascript
+var string1="Hello Madama ";
+var string2="How are you";
+result=string1.concat("" + string2);
+document.write(result);
+var uperCase="madhavi pathapati";
+var lowerCase="JOANNAH PATHAPATI";
+//alert(uperCase.toUpperCase());
+//alert(lowerCase.toLowerCase());
+//alert("madhavi pathapati".length);
+function getEmailandDomainpart(){
+//alert("hello");
+var emailAddress=document.getElementById('email').value;
+var emailPart=emailAddress.substring(0,emailAddress.IndexOf("@"));
+var domainPart=emailAddress.substring(emailAddress.IndexOf("@"));
+
+
+document.getElementById("api").value= emailPart;
+document.getElementById("domain").value= domainPart;
+
+}
+function getDomain()
+{
+
+var url=document.getElementById('txturl').value;
+var domainName=url.substring(url.lastIndexOf("."));
+document.getElementById('txtdomain').value=domainName;
+var url="http://indiagateway.net/";
+//alert(url.lastIndexOf("."));
+//url.lastIndexOf("planet", 20);
+alert(url.lastIndexOf("."));
+}
+//var userInput=Number(prompt("enter the Month number - 1,2,3",""));
+//var monthName="";
+//var messge="";
+
+//this is useing for if condition
+/*if(userInput == 1)
+{
+alert("enter the first number");
+}
+else if(userInput == 2)
+{
+alert("enter the two number");
+}
+else if(userInput == 3)
+{
+alert("enter the there number");
+}
+else(userInput !== 1 && userInput !== 2 && userInput !== 3)
+{
+alert("enter the B/W 1 And 3 number");
+}*///end of if conditions
+/*switch(userInput)
+{
+case 1:
+//alert("enter the First Num");
+ // break;
+
+case 2:
+//alert("enter the second Num");
+ // break;
+  case 3:
+alert("enter three Num is" + userInput );
+  break;
+  default:
+alert("enter the not b/w 1 and 3 Num");
+  break;
+} */
+//temary operator
+/*if(userInput % 2== 0)
+{
+messge="the num is even";
+}
+else{
+messge="the num is odd";
+}*/
+//var messge=userInput % 2== 0 ? "the num is even": "the num is odd";
+//var messge=userInput % 2== 0 ? (alert( "the num is even"), alert("your num is " + userInput)) :(alert( "the num is odd"), alert("your num is " + userInput)) ;
+//alert(messge);
+/*if(userInput == 1)
+{
+alert("Jan");
+}
+else if(userInput == 2)
+{
+alert("Feb");
+}
+else if(userInput == 3)
+{
+alert("Mac");
+}*/
+var whilePoop=Number(prompt("enter the numer",""));
+var start=0;
+while(start<=whilePoop)
+{
+//document.write(start + "</br>");
+start=start + 1;
+if(start % 2 == 0)
+{
+continue;
+//break;
+}
+document.write(start + "</br>");
+}
+// this array pop and push
+
+/*var myArray= [];
+for(var i==0;i<=5;i++)
+{
+myArray= i * 2;
+document.write(myArray);
+}
+for(var i==0;i<=5;i++)
+{
+document.write(myArray[i] + "</br>");
+}
+alert(myArray.length);*/
+var myArray =["srinu","venkat","john","bhunu"];
+myArray.sort();
+document.write(myArray);
+/*var myArr= [10,20,30,40,50,60,70,80,93,111];
+function isEven(value,index,array)
+{
+
+if(myArr % 2 == 0)
+{
+return true;
+
+}
+else{
+
+return false;
+}
+}
+var result=myArr.filter(isEven);
+document.write(result);*/
+function addNumber(frist,second)
+{
+var sum=frist + second;
+return sum;
+
+
+}
+var result = addNumber(10,20);
+document.write(result);
+var add = function (a,b)
+{
+var sum=a + b;
+return sum;
+
+
+}
+var result1 = add(10,25);
+document.write(result1);
+var count=0;
+
+</script>
+</head>
+<body>
+<form >
+<table align="center">
+<!--<tr><td>FirstNum</td><td><input type="text" name="uname" id="uname" /></td></tr>
+<tr><td>SecondNum</td><td><input type="text" name="pname" id="pname" /></td></tr>
+<tr><td>Email</td><td><input type="text" name="email" id="email" /></td></tr>
+<tr><td>API</td><td><input type="text" name="api" id="api" /></td></tr>
+<tr><td>Domain</td><td><input type="text" name="domain" id="domain" /></td></tr>-->
+<tr><td>URL</td><td><input type="text" name="txturl" id="txturl" /></td></tr>
+<tr><td>URLDOMAIn</td><td><input type="text" name="txtdomain" id="txtdomain" /></td></tr>
+
+<tr><td></td><td><input type="submit" value="submit" name="submit"id="submit" onClick="getDomain()" />
+<tr><td></td><td><input type="submit" value="clickincement" name="submit"id="submit" onClick="alert(++count);" />
+</table>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

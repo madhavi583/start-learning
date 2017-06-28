@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<script>
+var str = "hello madhavi pathapati";
+//document.write(str.split("").reverse().join("").split(" ").reverse().join(" "));
+var s = 'foobar madhavi';
+
+function r(e,v,r){
+  for(r=e.length,v='';r;)
+  v+=e[--r];
+  return v; 
+  for(var r=s;r<=s; r++)
+  v+=e[--r];
+  return v;
+  
+}
+
+console.log(r(s));
+document.write(r(s));
+document.write("</br>");
+/*var s2="hello ";
+var s22=" prema";
+function reverse(s) {
+  var o = '';
+  var m = '';
+  for (var i = s.length - 1; i >= 0; i--)
+    o += s[i];
+	
+  return o;
+  
+  for (var j = o.length + 1; j <= 0; j++)
+    m += s[j];
+  return m;
+}
+document.write(reverse(s2));
+console.log(reverse(s2));
+console.log(reverse(s22));
+function reverse(str) {
+  var chars = str.split("");
+  var length = chars.length;
+  var half = length / 2;
+  for (var ii = 0; ii < half; ii++) {
+    var temp = chars[ii];
+    var mirror = length - ii - 1;
+    chars[ii] = chars[mirror];
+    chars[mirror] = temp;
+  }
+  return chars.join("");
+}
+
+console.log(reverse("madhavi"));
+console.log(reverse("prema"));
+var ll="olive tech";
+function reverse(s) {
+  s = s.split('');
+  var len = s.length,
+      halfIndex = Math.floor(len / 2) - 1,
+      tmp;
+  for (var i = 0; i <= halfIndex; i++) {
+    tmp = s[len - i - 1];
+    s[len - i - 1] = s[i];
+    s[i] = tmp;
+  }
+  return s.join('');
+}
+var mm1=reverse(ll);
+//console.log(slice(mm1));
+
+/*var s3="hello india";
+function reverse(s) {
+  var o = [];
+  for (var i = s.length - 1, j = 0; i >= 0; i--, j++)
+    o[j] = s[i];
+  return o.join('');
+  for (var i = s.length - 1, j = 0; i >= 0; i--, j++)
+    o[j] = s[i];
+  return o.reverse('');
+}
+var mm="hello jh";
+function reverse(mm) {
+ mm = mm.split('');
+  var len = mm.length,
+      halfIndex = Math.floor(len / 2) - 1,
+      tmp;
+
+
+     for (var i = 0; i <= halfIndex; i++) {
+        tmp = mm[len - i - 1];
+       mm[len - i - 1] = mm[i];
+        mm[i] = tmp;
+      }
+      return mm.join('');
+    }
+console.log(r(mm));*/
+/*function reverseString(str){        
+    return str.split("").reverse().join("");    
+}
+reverseString("I love coding");
+
+function reverseString(str){
+    var myArray = [];
+    for(var i = 0; i <= str.length; i++ ){
+        myArray.push(str.charAt(str.length - i));
+    }
+    return myArray.join("");
+}
+reverseString("I love coding");
+
+function reverseString(str){
+    var reversedString = '';
+    for(var i = str.length -1 ; i >= 0; i--){
+        reversedString += str[i];
+    }
+
+    return reversedString;
+}
+reverseString("I love coding");
+
+function reverseString(str){
+    var newArray = [];
+    for(var i = str.length -1, j = 0; i >= 0; i--, j++){
+        newArray[j] = str[i];
+    }
+    return newArray.join("");
+}
+console.log(reverseString("I love coding"));*/
+//console.log(reverseString);
+/*var str = "hello world";
+var revStr = reverseWordByWord(str);
+ function reverseWordByWord(String, str)
+ {
+       // var strLeng = str.length()-1;
+	   var strLeng = str -1;
+       var Stringreverse = ""; 
+		var temp = "";
+
+        for( var i = 0; i <= strLeng; i++){
+            temp += str.charAt(i);
+            if((str.charAt(i) == ' ') || (i == strLeng)){
+                for(var j = temp.length()-1; j >= 0; j--){
+                    reverse += temp.charAt(j);
+                    if((j == 0) && (i != strLeng))
+                        reverse += " ";
+                }
+                temp = "";
+            }
+        }
+        return reverse;
+    }
+	document.write(reverse(str));
+	//console.log(reverseWordByWord(str));
+	function reverseArr(input) {
+    var ret = new Array;
+    for(var i = input.length-1; i >= 0; i--) {
+        ret.push(input[i]);
+    }
+    return ret;
+}
+
+var a = [3,5,7,8]
+var b = reverseArr(a);*/
+
+var str = "venkat pathapati";
+
+String.prototype.str_reverse= function(){
+ return this.split('').reverse().join('');
+}
+
+var arr = str.split(" ");
+for(var i=0; i<arr.length; i++){
+ arr[i] = arr[i].str_reverse();
+}
+
+console.log(arr.join(" "));
+
+
+
+//this is another way
+
+
+</script>
+
+
+</body>
+</html>

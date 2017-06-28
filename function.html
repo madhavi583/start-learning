@@ -1,0 +1,145 @@
+<html>
+<head>
+<script type="text/javascript">
+document.write("This is bible");
+var 
+ =new array("srinu","dhayamani","venkat","glory","prema","john");
+for(i=0;i<=10;i++)
+{
+look[i]=prompt("enter your array");  
+}
+document.write(look[0]+ look[1] + look[2]);
+bunny={name:"Bhanu Teja",age:"13"};
+bhula={name:"munisri",age:"19"}
+//Adding Methods to Our Objects
+function people(name,age)
+{
+this.name=name;
+this.age=age;
+this.yearuniteret=yearleft;
+}
+function yearleft()
+{
+var numyears=85-this.age;
+return numyears;
+
+}
+var natalie =new people(" we are very good personces",45);
+// end Adding Methods to Our Objects
+
+</script>
+</head>
+<body onload="alert('your web site is loading');">
+<script type="text/javascript">
+function funcy(one,two)
+{
+/*var x=10;
+var y=20;
+z = x + y;*/
+document.write("hello madhavi");
+}
+funcy("I am madhavi" , "I am prema");
+funcy("I am venkat" , "I am hannah");
+funcy("I am joanna" , "I am quite");
+alert("I am madhavi");
+
+document.write("</br>");
+function Addnum(a,b){
+var c=a+b;
+return c;
+}
+document.write(Addnum(5,4));
+document.write("</br>");
+//Calling a Function From Another Function
+function dofirst()
+{
+
+document.write("I am First");
+//dosecond();
+}
+function dosecond()
+{
+document.write("I am second");
+//dofirst();
+}
+function start()
+{
+dofirst();
+dosecond();
+
+}
+//dofirst();
+start();
+//Global & Local Variables
+
+var name="olivetecho";
+function glvarible()
+{
+document.write(name);
+}
+glvarible();
+document.write("</br>");
+document.write(name);
+//Assignment Operators
+var back=25;
+back +=100;
+var a=100;
+var b=200;
+var backup=200;
+document.write(back);
+if(100==200)
+{
+document.write("it is correct");
+}
+else
+{
+document.write("it is notcorrect");
+}
+//Complex Conditions
+var firstname="operation";
+var secondname="nehe";
+if(firstname=="operation")
+{
+document.write('yes');
+}
+else{
+document.write("no");
+}
+if(firstname=="operation" && secondname==="nehe" )
+{
+document.write('operation  nehe');
+}
+//for Loop
+for(x=0;x<=10;x+=3)
+{
+document.write("i am using for loop <br />");
+}
+//while Loop
+var x=1;
+while(x<=10){
+document.write( x + "i am using while loop <br />");
+x++;
+}
+// objects
+var prema="madhavi good ";
+//document.write(prema.lenght);
+document.write(bunny.name + "loves"  +bhula.name + "because of she is age"  +bhula.age);// object intilializers
+document.write("</br>");
+document.write(natalie.yearuniteret());
+document.write("</br>");
+/*var look =new array("srinu","dhayamani","venkat","glory","prema","john");
+look.reverse();
+look.push();
+document.write(look.sort());
+document.write(look[2]);*/
+<!--<a href="https://mahajesus.com/" onmouseover="alert()">click here</a>-->
+
+</script>
+<form>
+<input type="button" value="click me" onclick="funcy()";>
+<!--onMouseOver and onload-->
+<a href="https://mahajesus.com/" onmouseover="alert('madhavi pathapati')">click here</a>
+<a href="https://mahajesus.com/" onmouseout="alert('madhavi pathapati onmouseout')">onmouseout</a>
+</body>
+</form>
+</html>

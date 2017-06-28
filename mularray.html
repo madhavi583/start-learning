@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+<h4>JOIN</h4>
+<p id="mm">POP</p>
+<h4>POP</h4>
+
+<p id="m">JOIN</p>
+<h4>PUSH</h4>
+<p id="pp">PUSH</p>
+<button onclick="myFunction()">Click Here</button>
+<h4>Shift</h4>
+<p id="Shift">Shift</p>
+<p id="Shift1">Shift1</p>
+
+<h4>The unshift() method adds new elements to the beginning of an array.</h4>
+
+
+<button onclick="myFunction1()">Try it</button>
+
+<p id="un"></p>
+<h4>change element</h4>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<h4>Deleting Elements</h4>
+
+<p id="demo11"></p>
+<p id="demo22"></p>
+<p>The splice() method adds new elements to an array.</p>
+
+<button onclick="SplicingFunction()">Splicing</button>
+
+<p id="Splicing"></p>
+<h4>concat()</h4>
+
+<p>The concat() method is used to merge (concatenate) arrays:</p>
+
+<p id="concat"></p>
+<h4>toString()</h4>
+
+<p>The toString() method returns an array as a comma separated string:</p>
+
+<p id="toString"></p>
+<button onclick="sortFunction()">Sort</button>
+
+<p id="sort">Sort</p>
+
+<button onclick="reverseFunction()">reverse</button>
+
+<p id="reverse1"></p>
+<p>If we click then it will be display positions</p>
+<button onclick="indexFunction()">IndexOf</button>
+
+<p id="index"></p>
+
+<script>
+//Pop ->remove last element
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("mm").innerHTML = fruits.toString();
+fruits.pop();
+document.getElementById("m").innerHTML = fruits;
+document.write("</br>");
+var fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("mm").innerHTML = fruits1.join(" * ");
+//pusp ->add
+function myFunction() {
+    fruits.push("Kiwi");
+    document.getElementById("pp").innerHTML = fruits;
+}
+//Shifting Elements 
+
+var fruitsShift = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("Shift").innerHTML = fruitsShift;
+fruitsShift.shift();
+document.getElementById("Shift1").innerHTML = fruitsShift;
+var unshift1 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("un").innerHTML = unshift1;
+
+function myFunction1() {
+   unshift1.unshift("Lemon");
+    document.getElementById("un").innerHTML = unshift1;
+}
+//change element
+var change = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = change;
+change[0] = "Kiwi";
+document.getElementById("demo2").innerHTML = change;
+//Deleting Elements
+var Deleting = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo11").innerHTML =
+"The first fruit is: " + Deleting[0];
+delete Deleting[0];
+document.getElementById("demo22").innerHTML =
+"The first fruit is: " + Deleting[0];
+//Splicing an Array
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("Splicing").innerHTML = fruits;
+function SplicingFunction() {
+    fruits.splice(2, 0, "Lemon", "Kiwi");
+    document.getElementById("Splicing").innerHTML = fruits;
+}
+//concat
+var myGirls = ["bhula", "joanna"];
+var myBoys = ["glory", "dhayamani", "madhavi"];
+var myChildren = myGirls.concat(myBoys);
+
+document.getElementById("concat").innerHTML = myChildren;
+//tostring
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("toString").innerHTML = fruits.toString();
+//sort
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("sort").innerHTML = fruits;
+
+function sortFunction() {
+    fruits.sort();
+    document.getElementById("sort").innerHTML = fruits;
+}
+//Reversing an Array
+var revers = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("reverse").innerHTML = revers;
+
+function reverseFunction() {
+    fruits.sort();
+    fruits.reverse();
+    document.getElementById("reverse1").innerHTML = revers;
+}
+function indexFunction() {
+    var index = ["Banana", "Orange", "Apple", "Mango"];
+    var a = index.indexOf("Apple");
+    document.getElementById("index").innerHTML = a;
+}
+
+
+</script>
+</script>
+
+</body>
+</html>

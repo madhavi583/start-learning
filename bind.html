@@ -1,0 +1,41 @@
+<script type="text/javascript">
+// Example showing binding some parameters
+var sum = function(a, b) {
+  return a + b;
+};
+
+var add5 = sum.bind(null, 5);
+console.log(add5(10));
+// another examples for bind
+x = 9;
+var module = {
+    x: 81,
+    getX: function () {
+        return this.x;
+    }
+};
+
+module.getX(); // 81
+
+var getX = module.getX;
+getX(); // 9, because in this case, "this" refers to the global object
+
+// create a new function with 'this' bound to module
+var boundGetX = getX.bind(module);
+console.log(boundGetX()); // 81
+
+function multiply(x, y) { 
+    return x * y; 
+}
+// another examples for bind
+let multiplyBy10 = multiply.bind(null, 10);
+console.log(multiplyBy10(5));
+// another examples for bind
+window.color = "red"; 
+   var o = { color: "blue" }; 
+   function sayColor(){ 
+       alert(this.color); 
+   } 
+   var objectSayColor = sayColor.bind(o); 
+   objectSayColor(); //blue 
+</script>

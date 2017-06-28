@@ -1,0 +1,46 @@
+<html>
+<head>
+<script>
+function validte()
+{
+var ret=true;
+if(document.getElementById(uname).value ==""){
+document.getElementById(uname).innerText =="UserName is required";
+ret=false;
+}
+else{
+document.getElementById(uname).innerText ==" ";
+}
+return ret;
+}
+/*if(document.myform.uname)
+alert("enter user name");
+else
+alert("no");
+if(document.myform.pname)
+alert("enter user password");
+else
+alert("no");
+if(document.myform.email)
+alert("enter user email");
+else
+alert("no");
+}*/
+</script>
+</head>
+<body>
+<form name="myform" method="POST" action="insert.php" >
+<table align="center">
+<tr><td>UserName</td><td><input type="text" name="uname"  /></td></tr>
+<tr><td>Password</td><td><input type="text" name="pname" /></td></tr>
+<tr><td>Email</td><td><input type="text" name="email" /></td></tr>
+<tr><td></td><td><input type="submit" value="submit" name="submit"id="submit" onClick="validte()" />
+</table>
+</form>
+</body>
+</html>
+
+
+
+
+
